@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{titulo}}</title>
+<meta name="description" content="{{descricao}}">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="{{titulo}}">
+<meta property="og:description" content="{{descricao}}">
+<meta property="og:image" content="{{foto_abs}}">
+<meta property="og:url" content="https://felipeganho.github.io/">
+<link rel="canonical" href="https://felipeganho.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23161b22'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='%23fff' text-anchor='middle'%3EFG%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">{{jsonld}}</script>
+<style>
+:root{
+  --fundo:#ffffff; --texto:#1f2328; --suave:#59636e; --linha:#d1d9e0; --chip:#f0f3f6;
+  --topo:#161b22; --topo-texto:#f0f6fc; --topo-suave:#c9d1d9; --destaque:#0969da;
+  --largura:880px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --fundo:#0d1117; --texto:#e6edf3; --suave:#9198a1; --linha:#30363d; --chip:#161b22;
+    --topo:#010409; --topo-texto:#f0f6fc; --topo-suave:#c9d1d9; --destaque:#4493f8;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--fundo);color:var(--texto);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--destaque)}
+.wrap{max-width:var(--largura);margin:0 auto;padding:0 16px}
+header{background:var(--topo);color:var(--topo-texto);padding:48px 0 40px}
+header .wrap{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:start}
+header img{width:120px;height:120px;border-radius:50%;border:3px solid #30363d;object-fit:cover}
+header h1{margin:4px 0 2px;font-size:2rem;line-height:1.2}
+.cargo{margin:0;color:var(--topo-suave);font-size:1.05rem}
+.local{margin:2px 0 10px;color:var(--topo-suave);font-size:.9rem}
+.links{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:14px}
+.links a{color:var(--topo-texto);font-weight:600;text-decoration:none;border-bottom:1px solid #6e7681}
+.links a:hover{border-color:var(--topo-texto)}
+.resumo{margin:0;color:var(--topo-suave);max-width:68ch}
+nav{position:sticky;top:0;z-index:2;background:var(--fundo);border-bottom:1px solid var(--linha)}
+nav .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav a{padding:14px 12px;color:var(--suave);text-decoration:none;white-space:nowrap;font-size:.95rem;border-bottom:2px solid transparent}
+nav a:hover{color:var(--texto);border-color:var(--linha)}
+main{padding-bottom:48px}
+section{padding-top:36px}
+h2{font-size:1.4rem;margin:0 0 18px}
+h3{font-size:1.02rem;margin:0}
+.subtitulo{margin:28px 0 10px;font-size:1rem;color:var(--suave);font-weight:600}
+.linha{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:14px 0;border-top:1px solid var(--linha)}
+.linha:first-of-type{border-top:0}
+.periodo{margin:0;color:var(--suave);font-size:.9rem;font-variant-numeric:tabular-nums}
+.sub{margin:2px 0 0;color:var(--suave);font-size:.92rem}
+.contexto{margin:8px 0 0;font-size:.95rem}
+.linha ul{margin:8px 0 0;padding-left:18px}
+.linha li{margin:4px 0}
+.grade{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.cartao{border:1px solid var(--linha);border-radius:10px;padding:18px}
+.cartao p{margin:8px 0 0;font-size:.95rem}
+.cartao .tipo{margin:0 0 4px;color:var(--suave);font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+.chips{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:var(--chip);border:1px solid var(--linha);border-radius:999px;padding:2px 10px;font-size:.82rem}
+.comp{margin:0;display:grid;gap:14px}
+.comp div{display:grid;grid-template-columns:140px 1fr;gap:16px;align-items:start}
+.comp dt{font-weight:600;padding-top:4px}
+.comp dd{margin:0}
+.comp .chips{margin:0}
+.idiomas{margin:0}
+footer{border-top:1px solid var(--linha);padding:20px 0 32px;color:var(--suave);font-size:.85rem}
+@media (max-width:640px){
+  header{padding:32px 0 28px}
+  header .wrap{grid-template-columns:1fr;gap:16px}
+  header img{width:88px;height:88px}
+  header h1{font-size:1.6rem}
+  .linha,.comp div{grid-template-columns:1fr;gap:4px}
+  .grade{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <img src="{{foto}}" alt="Foto de {{nome}}" width="120" height="120">
+    <div>
+      <h1>{{nome}}</h1>
+      <p class="cargo">{{cargo}}</p>
+      <p class="local">{{local}}</p>
+      <div class="links">{{links}}</div>
+      <p class="resumo">{{resumo}}</p>
+    </div>
+  </div>
+</header>
+<nav aria-label="Seções"><div class="wrap">{{nav}}</div></nav>
+<main class="wrap">{{secoes}}</main>
+<footer><div class="wrap">Atualizado em {{atualizado}} · conteúdo em <code>data/*.json</code></div></footer>
+</body>
+</html>
