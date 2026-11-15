@@ -133,7 +133,6 @@ def main():
         .replace("{{resumo}}", e(perfil["resumo"]))
         .replace("{{nav}}", nav)
         .replace("{{secoes}}", corpo)
-        .replace("{{atualizado}}", e(perfil["atualizado"]))
         .replace("{{jsonld}}", json_ld(perfil, form))
     )
     (RAIZ / "index.html").write_text(html, encoding="utf-8", newline="\n")
