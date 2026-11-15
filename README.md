@@ -5,7 +5,7 @@ Site-currículo de uma página do Felipe Silva Ganho, publicado no GitHub Pages:
 ## Como atualizar
 1. Edite o arquivo da seção em `data/`:
    - `perfil.json`: nome, cargo, local, links e resumo do topo
-   - `experiencia.json`, `projetos.json`, `competencias.json`, `formacao.json`, `certificacoes.json`, `idiomas.json`
+   - `experiencia.json`, `projetos.json`, `competencias.json`, `formacao.json`, `certificacoes.json`, `idiomas.json`, `eventos.json`
 2. Rode `python build.py` (só biblioteca padrão). Ele gera o `index.html` a partir de `modelo.html`.
 3. Faça commit de `data/` e `index.html` juntos.
 
