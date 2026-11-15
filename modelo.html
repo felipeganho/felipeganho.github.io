@@ -44,6 +44,8 @@ nav{position:sticky;top:0;z-index:2;background:var(--fundo);border-bottom:1px so
 nav .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
 nav a{padding:14px 12px;color:var(--suave);text-decoration:none;white-space:nowrap;font-size:.95rem;border-bottom:2px solid transparent}
 nav a:hover{color:var(--texto);border-color:var(--linha)}
+nav a[aria-current="page"]{color:var(--texto);font-weight:600;border-color:var(--texto)}
+section[hidden]{display:none}
 main{padding-bottom:48px}
 section{padding-top:36px}
 h2{font-size:1.4rem;margin:0 0 18px}
@@ -93,5 +95,34 @@ h3{font-size:1.02rem;margin:0}
 </header>
 <nav aria-label="Seções"><div class="wrap">{{nav}}</div></nav>
 <main class="wrap">{{secoes}}</main>
+<script>
+/* Abas: mostra só a seção escolhida. Sem JavaScript, todas aparecem empilhadas. */
+(function () {
+  var secoes = [].slice.call(document.querySelectorAll("main > section"));
+  var links = [].slice.call(document.querySelectorAll("nav a"));
+  var nav = document.querySelector("nav");
+  if (!secoes.length) return;
+  function mostrar(id, rolar) {
+    var alvo = secoes.filter(function (s) { return s.id === id; })[0] || secoes[0];
+    secoes.forEach(function (s) { s.hidden = s !== alvo; });
+    links.forEach(function (a) {
+      if (a.getAttribute("href") === "#" + alvo.id) a.setAttribute("aria-current", "page");
+      else a.removeAttribute("aria-current");
+    });
+    if (rolar && nav.getBoundingClientRect().top <= 0) window.scrollTo(0, nav.offsetTop);
+  }
+  links.forEach(function (a) {
+    a.addEventListener("click", function (ev) {
+      ev.preventDefault();
+      var id = a.getAttribute("href").slice(1);
+      history.pushState(null, "", "#" + id);
+      mostrar(id, true);
+    });
+  });
+  window.addEventListener("popstate", function () { mostrar(location.hash.slice(1), false); });
+  mostrar(location.hash.slice(1), false);
+  if (location.hash) window.scrollTo(0, 0);
+})();
+</script>
 </body>
 </html>
