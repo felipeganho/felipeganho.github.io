@@ -21,16 +21,6 @@ def e(texto):
     return escape(texto or "", quote=True)
 
 
-MESES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho",
-         "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
-
-
-def mes_por_extenso(aaaa_mm):
-    """'2026-11' -> 'novembro de 2026'."""
-    ano, mes = aaaa_mm.split("-")[:2]
-    return f"{MESES[int(mes) - 1]} de {ano}"
-
-
 def chips(itens):
     return "".join(f'<li class="chip">{e(i)}</li>' for i in itens)
 
@@ -143,7 +133,6 @@ def main():
         .replace("{{resumo}}", e(perfil["resumo"]))
         .replace("{{nav}}", nav)
         .replace("{{secoes}}", corpo)
-        .replace("{{atualizado}}", e(mes_por_extenso(perfil["atualizado"])))
         .replace("{{jsonld}}", json_ld(perfil, form))
     )
     (RAIZ / "index.html").write_text(html, encoding="utf-8", newline="\n")
