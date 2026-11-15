@@ -83,6 +83,13 @@ def bloco_formacao(itens, certs, idiomas):
     )
 
 
+def bloco_eventos(itens):
+    return "".join(
+        linha(x["periodo"], x["nome"], x["local"], f'<p class="contexto">{e(x["detalhe"])}</p>' if x.get("detalhe") else "")
+        for x in itens
+    )
+
+
 def json_ld(perfil, formacao):
     dados = {
         "@context": "https://schema.org",
@@ -106,12 +113,14 @@ def main():
     form = carregar("formacao")
     certs = carregar("certificacoes")
     idiomas = carregar("idiomas")
+    eventos = carregar("eventos")
 
     secoes = [
         ("experiencia", "Experiência", bloco_experiencia(exp)),
         ("projetos", "Projetos", bloco_projetos(proj)),
         ("competencias", "Competências", bloco_competencias(comp)),
         ("formacao", "Formação", bloco_formacao(form, certs, idiomas)),
+        ("eventos", "Eventos", bloco_eventos(eventos)),
     ]
     nav = "".join(f'<a href="#{i}">{t}</a>' for i, t, _ in secoes)
     corpo = "".join(secao(i, t, c) for i, t, c in secoes)
