@@ -1,0 +1,30 @@
+[
+  {
+    "nome": "MedStation",
+    "tipo": "SaaS em produção",
+    "descricao": "Plataforma SaaS com back-end em Go organizado em Clean Architecture e DDD, front-end em React e deploy contínuo em VPS.",
+    "stack": ["Go", "PostgreSQL", "Redis", "React", "Docker", "Traefik", "GitHub Actions"],
+    "link": ""
+  },
+  {
+    "nome": "Ganho Atende",
+    "tipo": "Atendimento com IA",
+    "descricao": "Atendimento via WhatsApp Cloud API com IA e busca semântica (RAG) em PostgreSQL + pgvector, num monorepo TypeScript com testes.",
+    "stack": ["TypeScript", "Turborepo", "Vitest", "PostgreSQL", "pgvector", "Redis", "LLMs"],
+    "link": ""
+  },
+  {
+    "nome": "Radar de licitações",
+    "tipo": "Automação em produção",
+    "descricao": "Rotina diária que consulta o Portal Nacional de Contratações Públicas, faz a triagem dos editais com IA e envia alertas.",
+    "stack": ["Python", "cron", "LLMs"],
+    "link": ""
+  },
+  {
+    "nome": "Infraestrutura como código",
+    "tipo": "Plataforma",
+    "descricao": "Provisionamento de servidores em mais de um provedor de nuvem, com proxy reverso e deploy por containers.",
+    "stack": ["Terraform", "cloud-init", "Docker Compose", "Traefik"],
+    "link": ""
+  }
+]

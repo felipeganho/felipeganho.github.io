@@ -1,0 +1,4 @@
+exclude:
+  - modelo.html
+  - build.py
+  - README.md

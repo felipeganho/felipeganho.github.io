@@ -1,0 +1,9 @@
+[
+  { "grupo": "Linguagens", "itens": ["Go", "PHP", "Python", "TypeScript", "JavaScript", "SQL"] },
+  { "grupo": "Back-end", "itens": ["Laravel", "Livewire", "APIs REST", "Webhooks", "Filas e processamento assíncrono", "Clean Architecture", "DDD"] },
+  { "grupo": "Front-end", "itens": ["Vue.js", "React", "Next.js", "Tailwind CSS"] },
+  { "grupo": "Dados", "itens": ["Data Warehouse", "ELT", "dbt", "Airbyte", "Looker Studio", "PostgreSQL", "MySQL", "Redis", "pgvector"] },
+  { "grupo": "Infraestrutura", "itens": ["Docker", "Docker Swarm", "GitHub Actions", "Terraform", "Traefik", "Nginx", "Linux"] },
+  { "grupo": "IA aplicada", "itens": ["LLMs", "RAG", "Agentes de IA (Claude Code, MCP)", "n8n", "WhatsApp Cloud API"] },
+  { "grupo": "Liderança", "itens": ["Liderança técnica", "Code review", "Scrum", "Kanban", "Gestão de projetos"] }
+]

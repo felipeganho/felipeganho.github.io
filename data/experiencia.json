@@ -1,0 +1,48 @@
+[
+  {
+    "periodo": "2023 – atual",
+    "cargo": "Líder Técnico (Tech Lead)",
+    "empresa": "Clube do Valor",
+    "local": "Porto Alegre/RS · remoto",
+    "contexto": "Consultoria de investimentos (wealth services) com R$ 5 bilhões sob gestão e aconselhamento.",
+    "destaques": [
+      "Lidero a arquitetura e o deploy ponta a ponta de sistemas financeiros críticos em Laravel, Livewire e Vue.js; padronizar CI/CD e governança técnica reduziu em ~40% o tempo médio de entrega de features.",
+      "Construí pipelines ELT com Airbyte e dbt num Data Warehouse com dashboards no Looker Studio: análises de performance de carteira passaram de dias para minutos.",
+      "Serviços de processamento assíncrono em Laravel e Python com filas, com 99,9% de disponibilidade sob picos de demanda.",
+      "Orquestração de containers com Docker Swarm: deploy em produção mais de 60% mais rápido, com rollback seguro.",
+      "Automação de processos internos com n8n e IA."
+    ]
+  },
+  {
+    "periodo": "2022 – 2023",
+    "cargo": "Desenvolvedor Full Stack",
+    "empresa": "Innovation Latam",
+    "local": "São Paulo/SP · remoto",
+    "contexto": "Plataforma de inovação aberta que conecta startups e grandes empresas.",
+    "destaques": [
+      "Desenvolvi e mantive o marketplace em Laravel, Vue.js e MySQL, acompanhando um crescimento de 3× no volume de projetos submetidos em 12 meses.",
+      "Reduzi em ~50% o tempo de carregamento das telas principais e eliminei consultas N+1 nos módulos de matchmaking e indicadores."
+    ]
+  },
+  {
+    "periodo": "2021 – 2022",
+    "cargo": "Desenvolvedor Back-end",
+    "empresa": "Pagprime Bank",
+    "local": "Goiânia/GO · remoto",
+    "contexto": "Fintech de gestão de condomínios.",
+    "destaques": [
+      "Core de cobrança recorrente em Laravel (billing, multas, juros e rateios) extensível sem alterar o núcleo financeiro.",
+      "Integração de gateways de pagamento via webhooks e APIs REST (boleto, cartão e conciliação), com rastreabilidade de 100% das transações."
+    ]
+  },
+  {
+    "periodo": "2019 – 2020",
+    "cargo": "Gerente de Projetos e Desenvolvedor Full Stack",
+    "empresa": "Adapti, Empresa Júnior da Ufes",
+    "local": "São Mateus/ES",
+    "contexto": "",
+    "destaques": [
+      "Projetos web sob medida em Laravel e MySQL com Scrum e Kanban, todos entregues no prazo."
+    ]
+  }
+]
